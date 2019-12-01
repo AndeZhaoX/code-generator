@@ -23,6 +23,7 @@
                         connectionURL="${connectionURL}"
                         userId="${userId}"
                         password="${password}">
+            <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
@@ -72,7 +73,7 @@
             <property name="rootInterface" value="com.core.base.BaseMapper"/>
         </javaClientGenerator>
 
-        <table schema="${db.name}" tableName="${table.name}" domainObjectName="${entity.name}"
+        <table schema="zx_app" tableName="${table.name}" domainObjectName="${entity.name}"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
