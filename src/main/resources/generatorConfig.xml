@@ -79,6 +79,8 @@
                selectByExampleQueryId="false">
             <property name="rootClass" value="com.core.base.BaseEntity"/>
             <property name="useActualColumnNames" value="true"/>
+            <columnOverride column="reqData" jdbcType="VARCHAR" />
+            <columnOverride column="resData" jdbcType="VARCHAR" />
         </table>
     </context>
 </generatorConfiguration>
