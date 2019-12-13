@@ -70,14 +70,14 @@
             <property name="enableSubPackages" value="false"/>
 
             <!-- 可以为所有生成的接口添加一个父接口，但是MBG只负责生成，不负责检查-->
-            <property name="rootInterface" value="com.core.base.BaseMapper"/>
+            <property name="rootInterface" value="com.common.base.BaseMapper"/>
         </javaClientGenerator>
 
-        <table schema="zx_app" tableName="${table.name}" domainObjectName="${entity.name}"
+        <table schema="${schema.name}" tableName="${table.name}" domainObjectName="${entity.name}"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
-            <property name="rootClass" value="com.core.base.BaseEntity"/>
+            <property name="rootClass" value="com.common.entity.BaseEntity"/>
             <property name="useActualColumnNames" value="true"/>
             <columnOverride column="reqData" jdbcType="VARCHAR" />
             <columnOverride column="resData" jdbcType="VARCHAR" />
