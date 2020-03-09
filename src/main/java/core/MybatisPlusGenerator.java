@@ -44,6 +44,7 @@ public class MybatisPlusGenerator {
         gc.setServiceName(rb.getString("entityName")+"Service");
         gc.setServiceImplName(rb.getString("entityName")+"ServiceImpl");
         gc.setControllerName(rb.getString("entityName")+"Controller");
+        gc.setEntityName(rb.getString("entityName"));
         mpg.setGlobalConfig(gc);
 
         // 数据源配置
