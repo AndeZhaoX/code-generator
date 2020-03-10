@@ -19,10 +19,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Service
 public class ${table.serviceImplName} extends ${superServiceImplClass}<${entity}> implements ${table.serviceName} {
     @Autowired
-    private ${table.mapperName} i${entity}Mapper;
+    private ${table.mapperName} ${table.entityPath}Mapper;
 
     @Override
     protected BaseMapper<${entity}> getMapper() {
-        return i${entity}Mapper;
+        return ${table.entityPath}Mapper;
     }
 }
