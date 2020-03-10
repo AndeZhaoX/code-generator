@@ -3,8 +3,8 @@ package ${package.ServiceImpl};
 import ${package.Entity}.${entity};
 import ${package.Mapper}.${table.mapperName};
 import ${package.Service}.${table.serviceName};
-import common.core.base.BaseMapper;
-import common.core.base.BaseServiceImpl;
+import ${superMapperClassPackage};
+import ${superServiceImplClassPackage};
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
