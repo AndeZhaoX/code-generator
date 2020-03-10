@@ -1,0 +1,28 @@
+package ${package.ServiceImpl};
+
+import ${package.Entity}.${entity};
+import ${package.Mapper}.${table.mapperName};
+import ${package.Service}.${table.serviceName};
+import common.core.base.BaseMapper;
+import common.core.base.BaseServiceImpl;
+import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+
+/**
+ * <p>
+ * $!{table.comment} 服务实现类
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+@Service
+public class ${table.serviceImplName} extends ${superServiceImplClass}<${entity}> implements ${table.serviceName} {
+    @Autowired
+    private ${table.mapperName} i${entity}Mapper;
+
+    @Override
+    protected BaseMapper<${entity}> getMapper() {
+        return i${entity}Mapper;
+    }
+}
