@@ -82,11 +82,11 @@ public class MybatisPlusGenerator {
         StrategyConfig strategy = new StrategyConfig();
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
-        strategy.setSuperControllerClass("common.zx.core.base.BaseController");
-        strategy.setSuperEntityClass("common.zx.base.entity.BaseEntity");
-        strategy.setSuperMapperClass("common.zx.core.base.BaseMapper");
-        strategy.setSuperServiceClass("common.zx.core.base.BaseService");
-        strategy.setSuperServiceImplClass("common.zx.core.base.BaseServiceImpl");
+        strategy.setSuperControllerClass("common.zhaoxuan.core.base.BaseController");
+        strategy.setSuperEntityClass("common.zhaoxuan.base.entity.BaseEntity");
+        strategy.setSuperMapperClass("common.zhaoxuan.core.base.BaseMapper");
+        strategy.setSuperServiceClass("common.zhaoxuan.core.base.BaseService");
+        strategy.setSuperServiceImplClass("common.zhaoxuan.core.base.BaseServiceImpl");
         strategy.setEntityLombokModel(true);
         strategy.setRestControllerStyle(true);
         if (rb.containsKey("tableName")) {
