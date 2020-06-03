@@ -53,7 +53,7 @@ public class MybatisPlusGenerator {
         DataSourceConfig dataSourceConfig = new DataSourceConfig();
         dataSourceConfig.setDbType(DbType.MYSQL);
         dataSourceConfig.setUrl(rb.getString("url"));
-        dataSourceConfig.setDriverName("com.mysql.jdbc.Driver");
+        dataSourceConfig.setDriverName("com.mysql.cj.jdbc.Driver");
         dataSourceConfig.setUsername(rb.getString("userName"));
         dataSourceConfig.setPassword(rb.getString("password"));
         autoGenerator.setDataSource(dataSourceConfig);
