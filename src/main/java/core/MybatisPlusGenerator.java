@@ -82,11 +82,11 @@ public class MybatisPlusGenerator {
         StrategyConfig strategy = new StrategyConfig();
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
-        strategy.setSuperControllerClass("cloud.common.web.base.BaseController");
-        strategy.setSuperEntityClass("cloud.common.base.base.BaseEntity");
-        strategy.setSuperMapperClass("cloud.common.core.base.BaseMapper");
-        strategy.setSuperServiceClass("cloud.common.core.base.BaseService");
-        strategy.setSuperServiceImplClass("cloud.common.core.base.BaseServiceImpl");
+        strategy.setSuperControllerClass(rb.getString("base.controller"));
+        strategy.setSuperEntityClass(rb.getString("base.entity"));
+        strategy.setSuperMapperClass(rb.getString("base.mapper"));
+        strategy.setSuperServiceClass(rb.getString("base.service"));
+        strategy.setSuperServiceImplClass(rb.getString("base.service.impl"));
         strategy.setEntityLombokModel(true);
         strategy.setRestControllerStyle(true);
         if (rb.containsKey("tableName")) {
