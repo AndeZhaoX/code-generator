@@ -38,7 +38,7 @@ public class MybatisPlusGenerator {
         globalConfig.setEnableCache(false);
         globalConfig.setAuthor(rb.getString("author"));
         globalConfig.setKotlin(false);
-        globalConfig.setSwagger2(false);
+        globalConfig.setSwagger2(true);
         globalConfig.setBaseResultMap(true);
         globalConfig.setBaseColumnList(true);
         globalConfig.setMapperName("%sMapper");
