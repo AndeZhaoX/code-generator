@@ -1,18 +1,12 @@
 package core;
 
 import com.baomidou.mybatisplus.annotation.DbType;
-import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
-import com.baomidou.mybatisplus.generator.InjectionConfig;
 import com.baomidou.mybatisplus.generator.config.*;
-import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
-import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.ResourceBundle;
 
 /**
@@ -32,7 +26,9 @@ public class MybatisPlusGenerator {
 
         // 全局配置
         GlobalConfig globalConfig = new GlobalConfig();
-        globalConfig.setOutputDir(rb.getString("OutputDir"));
+        String path = MybatisPlusGenerator.class.getResource("/" ).getPath();
+        String ouPutDir = path.replace("/target/classes", "/src/main/java" );
+        globalConfig.setOutputDir(ouPutDir);
         globalConfig.setFileOverride(true);
         globalConfig.setOpen(false);
         globalConfig.setEnableCache(false);
@@ -53,7 +49,7 @@ public class MybatisPlusGenerator {
         DataSourceConfig dataSourceConfig = new DataSourceConfig();
         dataSourceConfig.setDbType(DbType.MYSQL);
         dataSourceConfig.setUrl(rb.getString("url"));
-        dataSourceConfig.setDriverName("com.mysql.cj.jdbc.Driver");
+        dataSourceConfig.setDriverName(rb.getString("driver.name"));
         dataSourceConfig.setUsername(rb.getString("userName"));
         dataSourceConfig.setPassword(rb.getString("password"));
         autoGenerator.setDataSource(dataSourceConfig);
